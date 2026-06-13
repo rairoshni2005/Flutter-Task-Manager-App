@@ -1,60 +1,67 @@
 # 📱 Task Manager Mobile Application
 
-A modern **Flutter-based Task Manager application** designed to help users organize, track, and manage their daily tasks efficiently. The app provides a clean user interface, productivity tracking, task categorization, and a calendar-based task view to improve daily productivity.
+A modern **Flutter-based Task Manager application** designed to help users organize, manage, and track daily tasks efficiently.
+
+The application provides a clean user interface with productivity tracking, task categorization, calendar-based planning, and persistent data storage to improve task management and user productivity.
 
 ---
 
-# 🚀 Features
+# 🚀 Project Objective
 
-### ✅ Core Features
+The objective of this project is to build a productivity-focused mobile application that allows users to:
 
-* Add Tasks
-* Edit Tasks
-* Delete Tasks
-* Mark Tasks as Completed
-* Search Tasks
-* Sort Tasks by Priority or Due Date
-
-### ⭐ Advanced Features
-
-* Daily Productivity Score
-* Confetti Animation on Task Completion
-* Calendar Task View
-* Task Categories
-* Task Attachments
-* Persistent Data Storage
+- Create and manage daily tasks
+- Organize tasks using categories
+- Track completion progress
+- Monitor productivity levels
+- Plan schedules using a calendar view
+- Store task data persistently
 
 ---
 
-# 🎯 Project Objective
+# ✨ Features
 
-The goal of this application is to provide users with a **simple yet powerful task management system** that improves productivity by allowing users to:
+## ✅ Core Features
 
-* Organize tasks efficiently
-* Track progress through productivity scoring
-* Categorize tasks
-* Visualize schedules through a calendar interface
-* Maintain task data even after restarting the application
+- Add new tasks
+- Edit existing tasks
+- Delete tasks
+- Mark tasks as completed
+- Search tasks
+- Sort tasks based on priority and due date
+
+---
+
+## ⭐ Advanced Features
+
+- Daily productivity score
+- Confetti animation on task completion
+- Calendar-based task view
+- Task categories
+- Task attachments
+- Persistent data storage
+- Modern UI with animations
 
 ---
 
 # 🛠️ Tech Stack
 
-### Frontend
+## Frontend
 
-* Flutter
-* Dart
+- Flutter
+- Dart
 
-### Database / Storage
+## Database / Storage
 
-* MongoDB
-* Local Storage (SharedPreferences)
+- MongoDB
+- SharedPreferences
 
-### Tools
+## Tools Used
 
-* MongoDB Compass
-* Visual Studio Code / Android Studio
-* Git & GitHub
+- Visual Studio Code
+- Android Studio
+- MongoDB Compass
+- Git & GitHub
 
 ---
 
@@ -62,128 +69,165 @@ The goal of this application is to provide users with a **simple yet powerful ta
 
 ```
 lib/
-│
+
 ├── main.dart
-│
+
 ├── models/
 │   └── task.dart
-│
+
 ├── services/
 │   └── storage_service.dart
-│
+
 ├── screens/
 │   ├── home_screen.dart
 │   ├── add_task_screen.dart
 │   ├── edit_task_screen.dart
 │   └── calendar_screen.dart
-│
+
 └── widgets/
     └── task_card.dart
 ```
 
-### Folder Explanation
+---
 
-**models/**
-Contains the data model used in the application.
+# 📁 Folder Description
 
-**services/**
-Handles data storage and business logic.
+## models/
 
-**screens/**
-Contains the UI screens of the application.
+Contains application data models.
 
-**widgets/**
-Reusable UI components.
+Example:
+
+- Task model
+- Task attributes
+- Data structure definition
+
+---
+
+## services/
+
+Handles:
+
+- Data storage
+- Database operations
+- Application logic
+
+---
+
+## screens/
+
+Contains all major application screens:
+
+- Home screen
+- Add task screen
+- Edit task screen
+- Calendar screen
+
+---
+
+## widgets/
+
+Contains reusable UI components.
+
+Example:
+
+- Task cards
+- Custom UI elements
 
 ---
 
 # 📊 Key Features Explained
 
-## 1️⃣ Task Categories
+## 🗂️ Task Categories
 
-Tasks can be grouped into categories such as:
+Tasks can be organized into categories:
 
-* Work
-* Study
-* Personal
-* Health
-* Other
+- Work
+- Study
+- Personal
+- Health
+- Other
 
-This helps users organize tasks effectively.
-
----
-
-## 2️⃣ Task Attachments
-
-Users can attach files to tasks such as:
-
-* Images
-* Documents
-* Notes
-
-This allows storing additional information related to a task.
+This helps users manage different types of activities efficiently.
 
 ---
 
-## 3️⃣ Daily Productivity Score
+## 📎 Task Attachments
 
-The application calculates a **productivity score** based on task completion.
+Users can attach additional information related to tasks:
+
+- Images
+- Documents
+- Notes
+
+This improves task organization and accessibility.
+
+---
+
+## 📈 Daily Productivity Score
+
+The application calculates productivity based on completed tasks.
 
 Formula:
 
 ```
-Productivity Score = 
+Productivity Score =
 (Completed Tasks / Total Tasks) × 100
 ```
 
-This score helps users track their daily performance.
+This helps users analyze their daily progress.
 
 ---
 
-## 4️⃣ Confetti Animation
+## 🎉 Task Completion Animation
 
-When a task is completed, a **confetti animation** appears on the screen to create a rewarding experience.
+A confetti animation is displayed when users complete tasks.
 
-This improves motivation and user engagement.
+Purpose:
+
+- Improves user engagement
+- Creates a rewarding experience
 
 ---
 
-## 5️⃣ Calendar Task View
+## 📅 Calendar Task View
 
-Tasks can be viewed in a **calendar format**, allowing users to:
+Users can view tasks through a calendar interface.
 
-* See upcoming deadlines
-* Plan tasks for specific days
-* Organize schedules efficiently
+Benefits:
+
+- Track upcoming deadlines
+- Plan schedules
+- Organize daily activities
 
 ---
 
 # 💾 Data Storage
 
-The application uses **MongoDB** for persistent data storage.
+The application uses MongoDB for storing task information.
 
-### Database
+## Database
 
 ```
 task_manager_db
 ```
 
-### Collection
+## Collection
 
 ```
 tasks
 ```
 
-Example stored document:
+Example document:
 
-```
+```json
 {
-"title": "Finish Flutter Project",
-"description": "Complete final mobile app submission",
-"priority": "High",
-"category": "Study",
-"dueDate": "2026-03-10",
-"isCompleted": false
+  "title": "Complete Flutter Project",
+  "description": "Finish final project submission",
+  "priority": "High",
+  "category": "Study",
+  "dueDate": "2026-03-10",
+  "isCompleted": false
 }
 ```
 
@@ -196,113 +240,147 @@ User creates task
         ↓
 Task object created
         ↓
-Converted to JSON
+Converted into data format
         ↓
-Stored in MongoDB
+Stored in database
         ↓
-Retrieved when app loads
+Retrieved when application starts
         ↓
-Displayed in UI
+Displayed in Flutter UI
 ```
 
 ---
 
 # 🎨 UI/UX Design
 
-The application uses a **modern and minimal design approach**.
+The application follows a modern and minimal design approach.
 
-UI highlights include:
+UI features:
 
-* Gradient headers
-* Task cards
-* Google Fonts
-* Smooth animations
-* Dark theme support
+- Gradient headers
+- Task cards
+- Google Fonts
+- Smooth animations
+- Dark theme support
+- Clean navigation
 
-The interface focuses on **simplicity and usability**.
+The design focuses on simplicity, usability, and better user experience.
 
 ---
 
 # 🧠 Core Logic
 
-### Productivity Calculation
+## Productivity Calculation
 
 ```
 productivityScore =
 (completedTasks / totalTasks) * 100
 ```
 
-### Task Filtering
+---
 
-Tasks are filtered using a search algorithm with **O(n)** time complexity.
+## Task Searching
 
-### Task Sorting
+Tasks are filtered using search functionality.
 
-Tasks are sorted using Dart’s built-in `.sort()` function.
+Complexity:
+
+```
+O(n)
+```
 
 ---
 
-# ⚙️ Installation
+## Task Sorting
 
-### 1️⃣ Clone the Repository
+Tasks are sorted using Dart's built-in:
 
 ```
+.sort()
+```
+
+function.
+
+---
+
+# ⚙️ Installation & Setup
+
+## 1. Clone Repository
+
+```bash
 git clone https://github.com/yourusername/task-manager-app.git
 ```
 
-### 2️⃣ Navigate to Project Folder
+---
 
-```
+## 2. Navigate to Project Folder
+
+```bash
 cd task-manager-app
 ```
 
-### 3️⃣ Install Dependencies
+---
 
-```
+## 3. Install Dependencies
+
+```bash
 flutter pub get
 ```
 
-### 4️⃣ Run the Application
+---
 
-```
+## 4. Run Application
+
+```bash
 flutter run
 ```
 
 ---
 
-# 📈 Future Improvements
+# 📈 Future Enhancements
 
-Possible future enhancements include:
+Possible improvements:
 
-* Push notifications for deadlines
-* Cloud synchronization
-* AI-based task suggestions
-* Voice task input
-* Team collaboration features
-
----
-
-# ⚠️ Limitations
-
-* No cloud sync currently
-* No real-time collaboration
-* No notification reminders
+- Push notifications
+- Cloud synchronization
+- AI-based task suggestions
+- Voice-based task creation
+- Team collaboration features
 
 ---
 
-# 👨‍💻 Author
+# ⚠️ Current Limitations
 
-Developed as a **Mobile Application Development Project** using Flutter.
-
----
-
-# ⭐ Contributing
-
-Contributions are welcome!
-Feel free to fork this repository and submit pull requests.
+- No cloud synchronization
+- No real-time collaboration
+- No deadline notification system
 
 ---
 
-# 📄 License
+# 🎯 Learning Outcomes
 
-This project is for educational purposes.
+Through this project, I practiced:
+
+✅ Flutter application development  
+✅ Dart programming  
+✅ Mobile UI/UX design  
+✅ Database integration  
+✅ State management  
+✅ CRUD operations  
+✅ Building real-world mobile applications  
+
+---
+
+# 👩‍💻 Author
+
+**Roshni Rai**  
+B.Tech Computer Science Engineering  
+ITM Skills University  
+
+Mobile application development enthusiast exploring Flutter and building practical applications.
+
+---
+
+# ⭐ License
+
+This project is developed for educational and learning purposes.
